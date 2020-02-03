@@ -1,4 +1,4 @@
-package com.dass.Learn.Morse.Code;
+package com.dass.LearnMorseCode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
