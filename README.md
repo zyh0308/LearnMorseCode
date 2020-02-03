@@ -17,12 +17,12 @@ This app creates different levels to test the audience's proficiency in converti
 
 ### User Stories
 
-#1 - As a user, I want to play a game so that I can learn morse code.
+* 1 - As a user, I want to play a game so that I can learn morse code.
 
-#2 - As a user, I want to be able to login so that my progress can be saved within the game and so that I can go back and replay levels that I want.
+* 2 - As a user, I want to be able to login so that my progress can be saved within the game and so that I can go back and replay levels that I want.
 
-#3 - As a developer, I want to have a secure login system that stores our users' login info securely so that their information is not compromised.
+* 3 - As a developer, I want to have a secure login system that stores our users' login info securely so that their information is not compromised.
 
-#4 - As a user, I want to be able to utilize web socket so that I can play with my friends.
+* 4 - As a user, I want to be able to utilize web socket so that I can play with my friends.
 
-#5 - As a user, I want this website to be neat in appearance and visually pleasing so that I enjoy being on the website even more.
+* 5 - As a user, I want this website to be neat in appearance and visually pleasing so that I enjoy being on the website even more.
