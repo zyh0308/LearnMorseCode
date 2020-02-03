@@ -12,23 +12,11 @@
 <header th:fragment="header">
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/myprofile">My Profile</a></li>
-            <li><a href="/friends">Friends</a></li>
-            <li><a href="/login">Log In</a></li>
-            <li><a href="/create">Register</a></li>
-            <li><a href="/logout">Logout</a></li>
+            <a href="/"><li>Home</li></a>
+            <a href="/myprofile"><li>My Profile</li></a>
+            <a href="/friends"><li>Friends</li></a>
+            <a th:href="${action}"><li th:text="${username} ? 'logout' : 'Login/Register'"></li></a>
         </ul>
-<!--        <ul>-->
-<!--        <form action="/profile" method="POST">-->
-<!--            <li>Username: <input  type="text" name="username"></li>-->
-<!--            <li>Password:  <input  type="password" name="password"></li>-->
-<!--            <li><input type="submit"></li>-->
-<!--        </form>-->
-<!--        <form  action="/create" method="GET">-->
-<!--            <li><button>Register Here!</button></li>-->
-<!--        </form>-->
-<!--        </ul>-->
     </nav>
     <br>
 </header>
