@@ -7,18 +7,20 @@
 </head>
 <body>
 <header th:insert="fragments/header.html :: header"></header>
+<main>
 <div th:if="${param.error}">
-    Invalid username and password.
+    <p>Invalid username and password.</p>
 </div>
 <div th:if="${param.logout}">
-    You have been logged out.
+    <p>You have been logged out.</p>
 </div>
+    <h1>Login or Register</h1>
 <form th:action="@{/login}" method="POST">
-    <div><label> User Name: <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
+     User Name: <input type="text" name="username"/>
+     Password:   <input type="password" name="password"/>
+    <input type="submit" value="Sign In"/>
 </form>
-<form th:action="@{/create}" method="GET">
-    <div><input type="submit" value="Register New Account"/></div>
-</form></body>
+    <div id="register"><a href="/create">Register</a></div>
+</main>
+</body>
 </html>
