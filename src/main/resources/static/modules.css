@@ -46,3 +46,16 @@ background-image: url("telegraph-featured.jpg");
 background-color: grey;
 opacity: .75;
 }
+main form {
+margin-left: 31%;
+margin-top: 15%;
+}
+main form input {
+margin-top: 2%;
+}
+#register {
+margin: 0 auto;
+margin-top: 2%;
+margin-bottom: 20%;
+text-align: center;
+}
