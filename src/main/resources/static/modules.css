@@ -1,9 +1,21 @@
 nav {
-background-color: grey;
-height: 30px;
+background-color: black;
+height: 4em;
 }
 nav ul li {
   display: inline-block;
   text-align: center;
-  width: 24%;
+  width: 22%;
+  font-size: 1.5em;
+  margin-top: .75em;
+  color: white;
+}
+h1 {
+font-size: 3em;
+}
+nav img {
+float: left;
+height: 4em;
+width: 4em;
+border-radius: 90%;
 }
