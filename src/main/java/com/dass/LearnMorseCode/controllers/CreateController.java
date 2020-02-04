@@ -22,7 +22,7 @@ public class CreateController {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private ApplicationUserRepo applicationUser;
+    private ApplicationUserRepo applicationUserRepo;
 
     @GetMapping("/create")
     public String getCreate(){
@@ -32,10 +32,10 @@ public class CreateController {
     @PostMapping("/create")
     public RedirectView registerUser(String username, String password){
         ApplicationUser newUser = new ApplicationUser(username, passwordEncoder.encode(password));
-        applicationUser.save(newUser);
+        applicationUserRepo.save(newUser);
         Authentication authentication = new UsernamePasswordAuthenticationToken(newUser, null, new LinkedList<>());
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        return new RedirectView("/profile");
+        return new RedirectView("/");
     }
 }
 
