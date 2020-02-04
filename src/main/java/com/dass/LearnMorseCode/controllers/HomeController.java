@@ -22,4 +22,8 @@ public class HomeController {
         }
         return "home";
     }
+    @GetMapping("/audiotest")
+    public String getAudioTest(){
+        return "audiotest";
+    }
 }
