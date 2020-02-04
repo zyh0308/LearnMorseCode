@@ -1,3 +1,9 @@
 * {
 font-family: "Times New Roman", Times, serif;
+color: white;
+text-shadow: 1px 1px grey;
+}
+main {
+background-color: grey;
+height: 100%;
 }
