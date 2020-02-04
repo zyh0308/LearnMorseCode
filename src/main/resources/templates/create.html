@@ -13,7 +13,7 @@
 <div th:if="${param.logout}">
     You have been logged out.
 </div>
-<form th:action="@{/create}" method="post">
+<form th:action="@{/create}" method="POST">
     <div><label> User Name: <input type="text" name="username"/> </label></div>
     <div><label> Password: <input type="password" name="password"/> </label></div>
     <div><label> Confirm Password: <input type="text" name="password"/> </label></div>
