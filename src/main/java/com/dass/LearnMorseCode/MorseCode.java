@@ -1,15 +1,9 @@
 package com.dass.LearnMorseCode;
-
-import jdk.internal.util.xml.impl.Input;
-
 import java.util.HashMap;
-
 public class MorseCode {
-    private HashMap<String, String> dictionary;
-
-
-    public MorseCode() {
-        this.dictionary = new HashMap<>();
+    private static HashMap<String, String> dictionary;
+    static {
+        dictionary = new HashMap<>();
         dictionary.put(".-", "a");
         dictionary.put("-...","b");
         dictionary.put("-.-.","c");
@@ -46,30 +40,32 @@ public class MorseCode {
         dictionary.put("---..","8");
         dictionary.put("----.","9");
         dictionary.put("-----","0");
-
-
     }
-
-    public String morseToEnglish(String morse) {
+    public static void main(String[] args){
+        morseToEnglish("-.-./---/--/.");
+    }
+    public static String morseToEnglish(String morse) {
         String[] charArray=morse.split("/");
-        for (int i =0; i<charArray.length;i++){
-
-        }
-        if (! this.dictionary.containsKey(morse)){
-            throw new IllegalArgumentException();
-        }
-
-        return dictionary.get(morse);
-
-    }
-
-    public String morseToEnglishSentence(String sentence){
-        String[] sentenceArray=sentence.split("/");
         StringBuilder result= new StringBuilder();
-        for (String morse:sentenceArray){
-            result.append(morseToEnglish(morse));
+        for (int i =0; i<charArray.length;i++){
+            if (! dictionary.containsKey(charArray[i])){
+                throw new IllegalArgumentException();
+            }
+            String english=dictionary.get(charArray[i]);
+            result.append(english);
         }
+        System.out.println(result.toString());
         return result.toString();
-
     }
+//    public String morseToEnglishSentence(String sentence){
+//        String[] sentenceArray=sentence.split("/");
+//        StringBuilder result= new StringBuilder();
+//        for (String morse:sentenceArray){
+//            result.append(morseToEnglish(morse));
+//        }
+//        return result.toString();
+//
+//    }
 }
+
+
