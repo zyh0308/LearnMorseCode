@@ -16,6 +16,7 @@ public class HomeController {
             m.addAttribute("action","/logout");
         } else {
             m.addAttribute("action","/login");
+
         }
         return "home";
     }
