@@ -1,6 +1,7 @@
 package com.dass.LearnMorseCode.controllers;
 
 
+import com.dass.LearnMorseCode.MorseCode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,7 @@ import java.security.Principal;
 public class HomeController {
     @GetMapping("/")
     public String getHome(Principal p, Model m){
+//        MorseCode.morseToEnglish("");
         if(p != null){
             m.addAttribute("username", p.getName());
             m.addAttribute("action","/logout");
