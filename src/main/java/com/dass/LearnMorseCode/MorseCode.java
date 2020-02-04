@@ -1,8 +1,11 @@
 package com.dass.LearnMorseCode;
+
 import java.util.HashMap;
 public class MorseCode {
     private static HashMap<String, String> dictionary;
+  
     static {
+
         dictionary = new HashMap<>();
         dictionary.put(".-", "a");
         dictionary.put("-...","b");
@@ -41,12 +44,15 @@ public class MorseCode {
         dictionary.put("----.","9");
         dictionary.put("-----","0");
     }
+
+
     public static void main(String[] args){
         morseToEnglish("-.-./---/--/.");
     }
     public static String morseToEnglish(String morse) {
         String[] charArray=morse.split("/");
         StringBuilder result= new StringBuilder();
+
         for (int i =0; i<charArray.length;i++){
             if (! dictionary.containsKey(charArray[i])){
                 throw new IllegalArgumentException();
@@ -54,9 +60,14 @@ public class MorseCode {
             String english=dictionary.get(charArray[i]);
             result.append(english);
         }
+
+
         System.out.println(result.toString());
         return result.toString();
+
+
     }
+
 //    public String morseToEnglishSentence(String sentence){
 //        String[] sentenceArray=sentence.split("/");
 //        StringBuilder result= new StringBuilder();
