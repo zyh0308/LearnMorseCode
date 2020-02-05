@@ -35,7 +35,7 @@ public class CreateController {
         applicationUserRepo.save(newUser);
         Authentication authentication = new UsernamePasswordAuthenticationToken(newUser, null, new LinkedList<>());
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        return new RedirectView("/");
+        return new RedirectView("/profile");
     }
 }
 
