@@ -3,7 +3,10 @@ package com.dass.LearnMorseCode.controllers;
 import com.dass.LearnMorseCode.models.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
+import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.*;
 
 @Controller
 public class MessageController {
@@ -24,5 +27,15 @@ public class MessageController {
     @GetMapping("/message")
     public String getMessagePage(){
         return "messagetest";
+    }
+
+    @GetMapping("/inbox")
+    public String getInbox(Principal p, Model m){
+
+        ApplicationUser user = applicationUserRepo.findByUsername(p.getName());
+
+        m.addAttribute("messages",user.getInbox());
+
+        return "inbox";
     }
 }
