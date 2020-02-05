@@ -12,7 +12,7 @@ nav ul li {
   color: white;
 }
 main h1 {
-font-size: 3em;
+font-size: 4em;
 width: 50%;
 margin: 0 auto;
 text-align: center;
@@ -20,14 +20,14 @@ text-align: center;
 main h2 {
 width: 50%;
 margin: 0 auto;
-font-size: 4em;
+font-size:3em;
 text-align: center;
 }
 main p {
 width: 50%;
 margin: 0 auto;
 text-align: center;
-font-size: 2em;
+font-size: 1.5em;
 }
 nav img {
 float: left;
@@ -50,19 +50,53 @@ background-size: cover;
 
 }
 
-main form {
-margin-left: 31%;
-margin-top: 15%;
+
+/*main form input {*/
+/*margin-top: 5%;*/
+/*}*/
+#container{
+  background: rgba(0, 0, 0, 0.5);
+  color:#b6c7c9;
+  margin-top: 10em;
+  font-family: 'Fredoka One', cursive;
+
+
+}
+#login{
+  text-align: center;
+  margin-top: 5vh;
+}
+/*  width: 40%;*/
+/*  height: 80px;*/
+/*  !*padding: 12px 20px;*!*/
+/*  overflow: hidden;*/
+/*  text-overflow: ellipsis;*/
+/*  display: -webkit-box;*/
+/*  -webkit-box-orient: vertical;*/
+/*  -webkit-line-clamp: 2; !* number of lines to show *!*/
+/*  !*line-height: 40px;        !* fallback *!*!*/
+/*  !*max-height: 80px;*!*/
+/*  align-items:center ;*/
+
+/*}*/
+#username{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-main form input {
-margin-top: 2%;
+
+#password{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
-#text{
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color:yellow;
-  margin-top: 10em;
-}
+
+
+
 
 #register {
 margin: 0 auto;
