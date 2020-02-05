@@ -16,7 +16,7 @@ public class ApplicationUser implements UserDetails {
     @OneToMany
     List<ApplicationUser> friends;
 
-    @OneToMany(mappedBy = "applicationUser")
+    @OneToMany(mappedBy = "user")
     List<Message> inbox;
 
 

@@ -17,7 +17,8 @@ public class MessageController {
     @PostMapping("/message")
     public void sendMessage(String message, String username){
         ApplicationUser user = applicationUserRepo.findByUsername(username);
-        Message m = new Message(message);
+        Message m = new Message(message,user);
+        messageRepo.save(m);
     }
 
     @GetMapping("/message")

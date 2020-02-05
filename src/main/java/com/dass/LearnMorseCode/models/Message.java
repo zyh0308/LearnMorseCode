@@ -1,5 +1,7 @@
 package com.dass.LearnMorseCode.models;
 
+import com.dass.LearnMorseCode.*;
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -10,15 +12,16 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @OneToMany
-    List<ApplicationUser> user;
+    @ManyToOne
+    ApplicationUser user;
 
 
     public Message(){
 
     }
-    public Message(String content){
-        this.content = content;
+    public Message(String content, ApplicationUser user){
+        this.content = Level.convertToMorseCode(content);
+        this.user = user;
     }
 
     private String content;
