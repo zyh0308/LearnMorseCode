@@ -1,16 +1,13 @@
 package com.dass.LearnMorseCode;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 import com.google.gson.Gson;
-//import sun.jvm.hotspot.debugger.posix.elf.ELFSectionHeader;
 
 
 public class Level {
