@@ -1,6 +1,7 @@
 package com.dass.LearnMorseCode.models;
 
 import javax.persistence.*;
+import java.util.*;
 
 @Entity
 public class Message {
@@ -8,6 +9,10 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+
+    @OneToMany
+    List<ApplicationUser> user;
+
 
     public Message(){
 

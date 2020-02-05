@@ -15,7 +15,13 @@ public class MessageController {
     MessageRepository messageRepo;
 
     @PostMapping("/message")
-    public String sendMessage(String message, String username){
-        return null;
+    public void sendMessage(String message, String username){
+        ApplicationUser user = applicationUserRepo.findByUsername(username);
+        Message m = new Message(message);
+    }
+
+    @GetMapping("/message")
+    public String getMessagePage(){
+        return "messagetest";
     }
 }
