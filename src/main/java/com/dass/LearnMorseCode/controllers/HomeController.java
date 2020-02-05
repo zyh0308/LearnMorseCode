@@ -29,9 +29,6 @@ public class HomeController {
         return "audiotest";
     }
 
-    @GetMapping("/about")
-    public String getAboutUs(){
-        return "about";
-    }
+
 
 }
