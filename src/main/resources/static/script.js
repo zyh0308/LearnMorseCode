@@ -1,8 +1,11 @@
 
 $(document).ready( ()=>{
     // Grabs the morse, cleans it up, hides the ugly morse with the slashes, displays the clean morse
-    const correctAnswer = checkMorse($("#output").text());
+    // and gets the correct answers
+    const correctAnswerMorse = checkMorse($("#output").text());
+    const correctAnswerEnglish = $("#correctAnswer").text();
     $("#output").hide();
+    $("#correctAnswer").hide();
     const cleanMorse = displayMorse($("#output").text());
     $("#display").text(cleanMorse);
     
@@ -24,7 +27,7 @@ $(document).ready( ()=>{
         return false;
         }
     });
-    // spacebar creats a space in the input
+    // space bar creats a space in the input
     $(document).keydown(function(e){
         if (e.which == 32) {
             $("#input").text(()=> $("#input").text() + " ");
@@ -35,15 +38,22 @@ $(document).ready( ()=>{
     $("#play").click(function(){
     playAudio(morse);
     })
-    // checks the input against the correct answer
-    $("#check").click(function userIsCorrect(){
-    if(correctAnswer == $("#input").text()){
+    // checks the input against the correct answer for english to morse
+    $("#checkMorse").click(function checkMorse(){
+    if(correctAnswerMorse == $("#input").text()){
     alert("Correct!");
     } else {
     alert("Incorrect!");
     }
     })
-
+    // checks the input against the correct answer for morse to english
+    $("#checkEnglish").click(function checkEnglish(){
+    if(correctAnswerEnglish == $("#userAnswer").val().toLowerCase()){
+    alert("Correct!");
+    } else {
+    alert("Incorrect!");
+    }
+    })
 });
 
 // plays the audio with the correct timing
@@ -51,31 +61,34 @@ function playAudio(string){
     counter = 0;
     bar = false;
     space = false;
+    timeUnit = 300;
     for(i = 0; i < string.length; i++){
         if(string.charAt(i) == "."){
             if(space){
-            setTimeout(playDit,(1400 + (200 * counter)));
+            setTimeout(playDit,((7 * timeUnit) + (timeUnit * counter)));
             counter++;
             space = false;
             } else if(bar){
-                setTimeout(playDit,(600 + (200 * counter)));
+                setTimeout(playDit,((3 * timeUnit) + (timeUnit * counter)));
                 counter++;
                 bar = false;
             } else {
-                setTimeout(playDit,(200 * counter));
+                setTimeout(playDit,(timeUnit * counter));
                 counter++;
             }
         } else if(string.charAt(i) == "-"){
             if(space){
-                setTimeout(playDah,(1400 + (200 * counter)));
+                setTimeout(playDah,((7 * timeUnit) + (timeUnit * counter)));
                 counter++;
                 space = false;
                 } else if(bar){
-                    setTimeout(playDah,(600 + (200 * counter)));
+                    setTimeout(playDah,((3 * timeUnit) + (timeUnit * counter)));
+
                     counter++;
                     bar = false;
                 } else {
-                    setTimeout(playDah,(200 * counter));
+                    setTimeout(playDah,(timeUnit * counter));
+
                     counter++;
                 }
             } else if(string.charAt(i) == "/"){

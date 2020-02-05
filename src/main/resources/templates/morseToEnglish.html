@@ -24,17 +24,9 @@
     <p id="output">[[${morse}]]</p>
     <p id='display'></p>
     <button id="play">Play</button>
-    <p id="input"></p>
-    <button id="check">Check Result</button>
-    <ul> How to build a level:
-        <li>Use the level controller to send a Model m attribute called "morse" with your morse string passed into
-        Level.convertToMorse(Your String)</li>
-        <li>Have a button with the id "play" on your page so the user can play the audio of the code.</li>
-        <li>Have an element with the id "input" which will display the Morse code the user has input</li>
-        <li>Build a /check route that accepts a String result to verify results</li>
-        <li>????</li>
-        <li>Profit</li>
-    </ul>
+    <p id="correctAnswer">[[${answer}]]</p>
+    Type answer here: <input type="text" id="userAnswer">
+    <button id="checkEnglish">Check Answer</button>
 </main>
 <script src="/script.js"></script>
 </body>
