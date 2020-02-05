@@ -12,6 +12,7 @@ import java.security.Principal;
 
 @Controller
 public class HomeController {
+
     @GetMapping("/")
     public String getHome(Principal p, Model m){
 //        MorseCode.morseToEnglish("");
@@ -28,7 +29,4 @@ public class HomeController {
     public String getAudioTest(){
         return "audiotest";
     }
-
-
-
 }

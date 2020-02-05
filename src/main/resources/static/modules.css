@@ -71,7 +71,6 @@ margin-bottom: 20%;
 text-align: center;
 }
 
-
 #all {
  text-align: center;
   display: inline-block;
@@ -79,6 +78,53 @@ text-align: center;
 
 main{
 background-image: url("http://howwikipediaworks.com/x/2020/01/old-newspaper-template-google-docs-free-fashioned-for-microsoft-word-download-photoshop-article-document-style-editable-blank-time-paper.jpg");
+}
+
+#inboxButton{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#friendsMain{
+text-align: center;
+}
+
+.userList{
+display: table;
+margin: 0 auto;
+height: 30vh;
+width: 40vw;
+font-size: 1.5em;
+text-align: center;
+background-color: grey;
+margin-bottom: 5vh;
+}
+
+.displayUsernameInFriends{
+border: 2px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.userMessageForm{
+margin: 0;
+}
+
+.sendMessageToUserButton{
+margin: 0 auto;
+margin-top: 7vh;
+display: flex;
+vertical-align: center;
+align-items: center;
+justify-content: center;
+height: 10vh;
+width: 20vw;
+background-color: tan;
+opacity: 100%;
+font-size: 16px;
+cursor: pointer;
 }
 
 #one{

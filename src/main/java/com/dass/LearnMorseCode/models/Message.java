@@ -1,9 +1,10 @@
 package com.dass.LearnMorseCode.models;
 
-import com.dass.LearnMorseCode.*;
 
+import com.dass.LearnMorseCode.*;
 import javax.persistence.*;
 import java.util.*;
+
 
 @Entity
 public class Message {
@@ -19,6 +20,7 @@ public class Message {
     public Message(){
 
     }
+
     public Message(String content, ApplicationUser user){
         this.content = Level.convertToMorseCode(content);
         this.user = user;
