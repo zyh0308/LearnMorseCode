@@ -18,18 +18,18 @@ public class Level {
     }
 
     public static void main(String [] args) throws IOException {
-        Scanner input = new Scanner(System.in);
-
-        convertToMorseCode(getQuoteFromApi());
-        System.out.println("What is the morse code for  " + getQuoteFromApi());
-        String userAnswer = input.nextLine();
-        if(userAnswer == convertToMorseCode(getQuoteFromApi())){
-            System.out.println("YOUR ANSWER IS CORRECT");
-        }
-        else{
-            System.out.println("YOUR ANSWER IS WRONG");
-        }
-
+//        Scanner input = new Scanner(System.in);
+//
+//        convertToMorseCode(getQuoteFromApi());
+//        System.out.println("What is the morse code for  " + getQuoteFromApi());
+//        String userAnswer = input.nextLine();
+//        if(userAnswer == convertToMorseCode(getQuoteFromApi())){
+//            System.out.println("YOUR ANSWER IS CORRECT");
+//        }
+//        else{
+//            System.out.println("YOUR ANSWER IS WRONG");
+//        }
+        System.out.println(convertToMorseCode("ghwhdgf fhfh"));
     }
 
     public static String convertToMorseCode(String regularText){
@@ -55,7 +55,7 @@ public class Level {
                 }
             }
         }
-        return  answers;
+        return  answers.substring(0,answers.length()-1);
     }
     public static String getQuoteFromApi() throws IOException {
         Gson gson = new Gson();
