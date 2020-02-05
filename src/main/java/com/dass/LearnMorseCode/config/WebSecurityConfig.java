@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .cors().disable()
             .csrf().disable()
             .authorizeRequests()
-            .antMatchers("/", "/login", "/create", "/*.css","/*.jpg","/*.png","/audiotest","/*.js","/*.wav").permitAll()
+            .antMatchers("/", "/login", "/create", "/*.css","/*.jpg","/*.png","/audiotest","/*.js","/*.wav","/mocklevel").permitAll()
             .anyRequest().authenticated()
             .and()
                 .formLogin()
