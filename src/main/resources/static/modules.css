@@ -6,13 +6,13 @@ box-shadow: 1px 2px black;
 nav ul li {
   display: inline-block;
   text-align: center;
-  width: 22%;
+  width: 18%;
   font-size: 1.5em;
   margin-top: .75em;
   color: white;
 }
 main h1 {
-font-size: 4em;
+font-size: 3em;
 width: 50%;
 margin: 0 auto;
 text-align: center;
@@ -36,23 +36,34 @@ width: 4em;
 border-radius: 90%;
 }
 main img {
-position: relative;
-margin-left: 38%;
-height: 22em;
-width: 18em;
+/*position: fixed;*/
+/*margin-left: 38%;*/
+
 }
-#home {
+body {
 background-image: url("telegraph-featured.jpg");
 background-color: grey;
 opacity: .75;
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: cover;
+
 }
+
 main form {
 margin-left: 31%;
 margin-top: 15%;
 }
+
 main form input {
 margin-top: 2%;
 }
+#text{
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color:yellow;
+  margin-top: 10em;
+}
+
 #register {
 margin: 0 auto;
 margin-top: 2%;
