@@ -14,7 +14,8 @@
 <div th:if="${param.logout}">
     <p>You have been logged out.</p>
 </div>
-    <h1>Login or Register</h1>
+
+<h1>Login Here</h1>
 <form th:action="@{/login}" method="POST">
      User Name: <input type="text" name="username"/>
      Password:   <input type="password" name="password"/>
@@ -24,3 +25,5 @@
 </main>
 </body>
 </html>
+
+
