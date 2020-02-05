@@ -34,6 +34,7 @@ $(document).ready( ()=>{
         }
     })
     // pressing play plays the audio of the output
+
     const morse = $("#output").text();
     $("#play").click(function(){
     playAudio(morse);
@@ -138,3 +139,4 @@ function displayMorse(code){
      }
      return result;
  }
+
