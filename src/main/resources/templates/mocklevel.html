@@ -22,12 +22,10 @@
 <body>
 <main>
     <p id="output">[[${morse}]]</p>
+    <p id='display'></p>
     <button id="play">Play</button>
     <p id="input"></p>
-    <form action="/checkresult" method="GET">
-    <input id="result" type="hidden" name="result">
-        <input type="submit" value="Check Result">
-    </form>
+    <button id="check">Check Result</button>
     <ul> How to build a level:
         <li>Use the level controller to send a Model m attribute called "morse" with your morse string passed into
         Level.convertToMorse(Your String)</li>
