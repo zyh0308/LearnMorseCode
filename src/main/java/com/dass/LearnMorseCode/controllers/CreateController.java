@@ -40,6 +40,8 @@ public class CreateController {
         Authentication authentication = new UsernamePasswordAuthenticationToken(newUser, null, new LinkedList<>());
         SecurityContextHolder.getContext().setAuthentication(authentication);
         return new RedirectView("/profile");
+
+
     }
     @GetMapping("/level/{level_number}")
     public String showLevelQuestion(@PathVariable int level_number, Model m){
