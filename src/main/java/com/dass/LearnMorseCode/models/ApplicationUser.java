@@ -1,10 +1,11 @@
 package com.dass.LearnMorseCode.models;
 
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.persistence.*;
 import java.util.*;
+
 
 @Entity
 public class ApplicationUser implements UserDetails {
@@ -13,8 +14,8 @@ public class ApplicationUser implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @OneToMany
-    List<ApplicationUser> friends;
+//    @OneToMany
+//    List<ApplicationUser> friends;
 
     @OneToMany(mappedBy = "user")
     List<Message> inbox;
@@ -28,9 +29,9 @@ public class ApplicationUser implements UserDetails {
         this.password = password;
     }
 
-    public List<ApplicationUser> getFriends() {
-        return friends;
-    }
+//    public List<ApplicationUser> getFriends() {
+//        return friends;
+//    }
 
     public List<Message> getInbox() {
         return inbox;
