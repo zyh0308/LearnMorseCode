@@ -1,39 +1,48 @@
 package com.dass.LearnMorseCode;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
+
+import com.dass.LearnMorseCode.ApiQuote;
 import com.google.gson.Gson;
-//import sun.jvm.hotspot.debugger.posix.elf.ELFSectionHeader;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Level {
     String toBeMorseCoded = "";
     int levelTracker = 0;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long id;
+
     public Level(String toBeMorseCoded) {
         this.toBeMorseCoded = toBeMorseCoded;
         this.levelTracker = 0;
     }
 
     public static void main(String [] args) throws IOException {
-        Scanner input = new Scanner(System.in);
-
-        convertToMorseCode(getQuoteFromApi());
-        System.out.println("What is the morse code for  " + getQuoteFromApi());
-        String userAnswer = input.nextLine();
-        if(userAnswer == convertToMorseCode(getQuoteFromApi())){
-            System.out.println("YOUR ANSWER IS CORRECT");
-        }
-        else{
-            System.out.println("YOUR ANSWER IS WRONG");
-        }
-
+//        Scanner input = new Scanner(System.in);
+//
+//        convertToMorseCode(getQuoteFromApi());
+//        System.out.println("What is the morse code for  " + getQuoteFromApi());
+//        String userAnswer = input.nextLine();
+//        if(userAnswer == convertToMorseCode(getQuoteFromApi())){
+//            System.out.println("YOUR ANSWER IS CORRECT");
+//        }
+//        else{
+//            System.out.println("YOUR ANSWER IS WRONG");
+//        }
+        System.out.println(convertToMorseCode("ghwhdgf fhfh"));
     }
 
     public static String convertToMorseCode(String regularText){
@@ -59,7 +68,7 @@ public class Level {
                 }
             }
         }
-        return  answers;
+        return  answers.substring(0,answers.length()-1);
     }
     public static String getQuoteFromApi() throws IOException {
         Gson gson = new Gson();

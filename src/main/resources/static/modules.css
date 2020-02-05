@@ -6,7 +6,7 @@ box-shadow: 1px 2px black;
 nav ul li {
   display: inline-block;
   text-align: center;
-  width: 22%;
+  width: 18%;
   font-size: 1.5em;
   margin-top: .75em;
   color: white;
@@ -69,4 +69,65 @@ margin: 0 auto;
 margin-top: 2%;
 margin-bottom: 20%;
 text-align: center;
+}
+
+
+#all {
+ text-align: center;
+  display: inline-block;
+}
+
+main{
+background-image: url("http://howwikipediaworks.com/x/2020/01/old-newspaper-template-google-docs-free-fashioned-for-microsoft-word-download-photoshop-article-document-style-editable-blank-time-paper.jpg");
+}
+
+#one{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#two{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#three{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#four{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#five{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#six{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#seven{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#eight{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#nine{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
+}
+#ten{
+  background-color: brown;
+  width: 150px;
+    height: 30px;
 }
