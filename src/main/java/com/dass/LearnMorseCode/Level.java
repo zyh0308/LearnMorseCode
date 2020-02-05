@@ -7,12 +7,24 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
+
+import com.dass.LearnMorseCode.ApiQuote;
 import com.google.gson.Gson;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Level {
     String toBeMorseCoded = "";
     int levelTracker = 0;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long id;
+
     public Level(String toBeMorseCoded) {
         this.toBeMorseCoded = toBeMorseCoded;
         this.levelTracker = 0;
