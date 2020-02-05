@@ -17,7 +17,6 @@ public class AboutController {
             m.addAttribute("action","/logout");
         } else {
             m.addAttribute("action","/login");
-
         }
         return "about";
     }
