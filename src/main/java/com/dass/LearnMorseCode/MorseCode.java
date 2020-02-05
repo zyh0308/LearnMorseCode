@@ -47,6 +47,7 @@ public class MorseCode {
 
 
     public static void main(String[] args){
+
         morseToEnglish("-.-./---/--/.");
     }
     public static String morseToEnglish(String morse) {
