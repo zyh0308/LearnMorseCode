@@ -10,19 +10,19 @@ import java.security.Principal;
 
 
 @Controller
-public class ProfileController {
+public class FriendsController {
 
     @Autowired
     private ApplicationUserRepo applicationUser;
 
-    @GetMapping("/profile")
+    @GetMapping("/friends")
     public String getCreate(Principal p, Model m){
 
         if (p != null) {
             m.addAttribute("username", p.getName());
         }
-
-        return "profile";
+        return "friends";
     }
 }
+
 
