@@ -3,6 +3,7 @@ background-color: black;
 height: 4em;
 box-shadow: 1px 2px black;
 }
+
 nav ul li {
   display: inline-block;
   text-align: center;
@@ -11,35 +12,53 @@ nav ul li {
   margin-top: .75em;
   color: white;
 }
+
 main h1 {
-font-size: 3em;
+font-size: 4em;
 width: 50%;
 margin: 0 auto;
 text-align: center;
 }
+
 main h2 {
 width: 50%;
 margin: 0 auto;
-font-size: 4em;
+font-size:3em;
 text-align: center;
 }
+
 main p {
 width: 50%;
 margin: 0 auto;
 text-align: center;
-font-size: 2em;
+font-size: 1.5em;
 }
+
+#profileContainer{
+text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 15vh;
+padding-top: 5vh;
+padding-bottom: 5vh;
+background: rgba(0, 0, 0, 0.5);
+color:#b6c7c9;
+
+}
+
 nav img {
 float: left;
 height: 4em;
 width: 4em;
 border-radius: 90%;
 }
+
 main img {
 /*position: fixed;*/
 /*margin-left: 38%;*/
-
 }
+
 body {
 background-image: url("telegraph-featured.jpg");
 background-color: grey;
@@ -47,28 +66,84 @@ opacity: .75;
 background-repeat: no-repeat;
 background-attachment: scroll;
 background-size: cover;
+}
+
+#container{
+text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 15vh;
+padding-top: 5vh;
+padding-bottom: 5vh;
+background: rgba(0, 0, 0, 0.5);
+color:#b6c7c9;
+font-family: 'Fredoka One', cursive;
+}
+
+#login{
+  text-align: center;
+  margin-top: 5vh;
+}
+
+#username{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
-main form {
-margin-left: 31%;
-margin-top: 15%;
-}
-
-main form input {
-margin-top: 2%;
-}
-#text{
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color:yellow;
-  margin-top: 10em;
+#password{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 #register {
+color: gold;
 margin: 0 auto;
 margin-top: 2%;
-margin-bottom: 20%;
 text-align: center;
+}
+
+#loginToRegisterButton{
+background-color: gold;
+}
+
+#messageMain{
+text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20vh;
+width: 60%;
+}
+
+#messageForm{
+height: 50vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+#messageTo{
+width: 15vw;
+margin: 5px;
+}
+
+#messageText{
+width: 30vw;
+height-min: 10vh;
+height-max: 20vh;
+margin: 5px;
+}
+
+#messageSubmit{
+width: 15vw;
+margin: 5px;
 }
 
 #all {
@@ -88,6 +163,7 @@ justify-content: center;
 
 #friendsMain{
 text-align: center;
+padding-bottom: 5vh;
 }
 
 .userList{

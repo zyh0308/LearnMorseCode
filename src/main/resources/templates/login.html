@@ -2,26 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <link type="text/css" rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
 <head>
     <title>Login</title>
 </head>
 <body>
 <header th:insert="fragments/header.html :: header"></header>
 <main>
-<div th:if="${param.error}">
-    <p>Invalid username and password.</p>
-</div>
-<div th:if="${param.logout}">
-    <p>You have been logged out.</p>
-</div>
-
-<h1>Login Here</h1>
-<form th:action="@{/login}" method="POST">
-     User Name: <input type="text" name="username"/>
-     Password:   <input type="password" name="password"/>
-    <input type="submit" value="Sign In"/>
-</form>
-    <div id="register"><a href="/create">Register</a></div>
+    <div id="container">
+        <h2>Login Here</h2>
+        <form id="login" th:action="@{/login}" method="POST">
+            <div id="username"><span>Username: </span><input  type="text" name="username"/></div>
+            <div id="password"><span>Password: </span><input   type="password" name="password"/></div>
+            <input type="submit" value="Sign In"/>
+        </form>
+        <div id="register"><span>New to the site? </span><a href="/create"><button id="loginToRegisterButton">Register Here</button></a></div>
+    </div>
 </main>
 </body>
 </html>

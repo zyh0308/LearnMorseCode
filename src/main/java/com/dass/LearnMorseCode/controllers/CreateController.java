@@ -1,5 +1,6 @@
 package com.dass.LearnMorseCode.controllers;
 
+import com.dass.LearnMorseCode.Level;
 import com.dass.LearnMorseCode.LevelRepository;
 import com.dass.LearnMorseCode.models.ApplicationUser;
 import com.dass.LearnMorseCode.models.ApplicationUserRepo;
@@ -14,7 +15,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
+
+import java.io.IOException;
 import java.util.LinkedList;
+
+import static com.dass.LearnMorseCode.Level.getQuoteFromApi;
 
 @Controller
 public class CreateController {
@@ -44,41 +49,60 @@ public class CreateController {
 
     }
     @GetMapping("/level/{level_number}")
-    public String showLevelQuestion(@PathVariable int level_number, Model m){
+    public String showLevelQuestion(@PathVariable int level_number, Model m) throws IOException {
         switch(level_number){
             case 1:
-                m.addAttribute("textHolder", "the");
-
+                m.addAttribute("answer", "the");
+                m.addAttribute("morse", Level.convertToMorseCode("the"));
                 break;
             case 2:
-                m.addAttribute("textHolder", "quick");
+                m.addAttribute("answer", "quick");
+                m.addAttribute("morse", Level.convertToMorseCode("quick"));
+
                 break;
             case 3:
-                m.addAttribute("textHolder", "brown");
+                m.addAttribute("answer", "brown");
+                m.addAttribute("morse", Level.convertToMorseCode("brown"));
+
                 break;
             case 4:
-                m.addAttribute("textHolder", "fox");
+                m.addAttribute("answer", "fox");
+                m.addAttribute("morse", Level.convertToMorseCode("fox"));
+
                 break;
             case 5:
-                m.addAttribute("textHolder", "jumps");
+                m.addAttribute("answer", "jumps");
+                m.addAttribute("morse", Level.convertToMorseCode("jumps"));
+
                 break;
             case 6:
-                m.addAttribute("textHolder", "over");
+                m.addAttribute("answer", "over");
+                m.addAttribute("morse", Level.convertToMorseCode("over"));
+
                 break;
             case 7:
-                m.addAttribute("textHolder", "the");
+                m.addAttribute("answer", "the");
+                m.addAttribute("morse", Level.convertToMorseCode("the"));
+
                 break;
             case 8:
-                m.addAttribute("textHolder", "lazy");
+                m.addAttribute("answer", "lazy");
+                m.addAttribute("morse", Level.convertToMorseCode("lazy"));
+
                 break;
             case 9:
-                m.addAttribute("textHolder", "dog");
+                m.addAttribute("answer", "dog");
+                m.addAttribute("morse", Level.convertToMorseCode("dog"));
+
                 break;
             case 10:
-                m.addAttribute("textHolder", "api call result comes here");
+                m.addAttribute("answer", getQuoteFromApi());
+                m.addAttribute("morse", Level.getQuoteFromApi());
+
         }
         m.addAttribute("level_number", level_number);
-    return "converter";
+
+    return "englishToMorse";
     }
 
     @PostMapping("level/{level_number}")
