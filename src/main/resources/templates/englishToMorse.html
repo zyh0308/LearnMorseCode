@@ -39,7 +39,9 @@
         <p id="input"></p>
         <form action="/morseToEnglish" method="GET">
             <input type="hidden" id="correctAnswer" th:value="${answer}">
-            <input value="${level_number}" type="hidden" name="currentLevel">
+
+            <input th:value="${level_number}" type="hidden" name="currentLevel">
+
             <button id="checkMorse" type=submit>Check Result</button>
 
         </form>
