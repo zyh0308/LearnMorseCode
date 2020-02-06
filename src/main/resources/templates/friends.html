@@ -17,8 +17,8 @@
         </li>
         <li>
             <!--Send User A Message-->
-            <form class="userMessageForm" action="/message" method="POST">
-                <input type="hidden" th:value="${user.username}" name="sendingMessageTo">
+            <form class="userMessageForm" action="/sendmessage" method="GET">
+<!--                <input type="hidden" th:value="${user.username}" name="sendingMessageTo">-->
                 <button class="sendMessageToUserButton">Send Message</button>
             </form>
         </li>
