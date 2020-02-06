@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -26,11 +26,10 @@
 <header th:insert="fragments/header.html :: header"></header>
 
 <main>
-    <header>
-    </header>
+
     <div id="container">
         <p id="output">[[${morse}]] </p>
-        <p><p>Please convert " [[${answer}]] " to Morse Code</p> </p>
+        <p><p>Please convert " [[${answer}]] " to Morse Code</p></p>
         <p id="player"><button id="play">Listen to the Morse Code sound of your answer</button></p>
         <div id="didi">
             Type answer here: <input type="text" id="userAnswer">
@@ -38,7 +37,12 @@
         </div>
 
         <p id="input"></p>
-        <p id="res"><button id="checkMorse">Check Result</button></p>
+        <form action="/morseToEnglish" method="GET">
+            <input type="hidden" id="correctAnswer" th:value="${answer}">
+            <input value="${level_number}" type="hidden" name="currentLevel">
+            <button id="checkEnglish" type=submit>Check Result</button>
+
+        </form>
     </div>
 </main>
 <script src="/script.js"></script>

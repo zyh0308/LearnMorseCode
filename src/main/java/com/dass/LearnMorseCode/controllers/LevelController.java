@@ -11,7 +11,7 @@ public class LevelController {
     public String morseToEnglish(Model m){
 //        m.addAttribute("morse", Level.convertToMorseCode("sos"));
 //        m.addAttribute("answer","sos");
-        return "MorseToEnglish";
+        return "morseToEnglish";
     }
     @GetMapping("/englishToMorse")
     public String englishToMorse(Model m){

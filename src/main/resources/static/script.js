@@ -3,7 +3,7 @@ $(document).ready( ()=>{
     // Grabs the morse, cleans it up, hides the ugly morse with the slashes, displays the clean morse
     // and gets the correct answers
     const correctAnswerMorse = checkMorse($("#output").text());
-    const correctAnswerEnglish = $("#correctAnswer").text();
+    const correctAnswerEnglish = $("#correctAnswer").val();
     $("#output").hide();
     $("#correctAnswer").hide();
     const cleanMorse = displayMorse($("#output").text());
@@ -43,6 +43,7 @@ $(document).ready( ()=>{
     $("#checkMorse").click(function checkMorse(){
     if(correctAnswerMorse == $("#input").text()){
     alert("Correct!");
+
     } else {
     alert("Incorrect!");
     }
@@ -50,7 +51,7 @@ $(document).ready( ()=>{
     // checks the input against the correct answer for morse to english
     $("#checkEnglish").click(function checkEnglish(){
     if(correctAnswerEnglish == $("#userAnswer").val().toLowerCase()){
-    alert("Correct!");
+        alert("Correct!");
     } else {
     alert("Incorrect!");
     }

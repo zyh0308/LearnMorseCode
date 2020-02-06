@@ -41,6 +41,7 @@ public class Message {
     }
 
     public long getId() {
+
         return id;
     }
 }

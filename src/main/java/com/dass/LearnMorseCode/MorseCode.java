@@ -1,7 +1,18 @@
 package com.dass.LearnMorseCode;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.HashMap;
+@Entity
 public class MorseCode {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public long id;
     private static HashMap<String, String> dictionary;
   
     static {
