@@ -22,7 +22,7 @@ public class Message {
     }
 
     public Message(String content, ApplicationUser user){
-        this.content = Level.convertToMorseCode(content);
+        this.content = content;
         this.user = user;
     }
 

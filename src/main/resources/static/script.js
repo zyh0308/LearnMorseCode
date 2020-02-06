@@ -55,6 +55,9 @@ $(document).ready( ()=>{
     alert("Incorrect!");
     }
     })
+    $("#sender").click(()=>{
+    $("#messageContent").val($("#input").text());
+    })
 });
 
 // plays the audio with the correct timing
