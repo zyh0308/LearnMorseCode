@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<link type="text/css" rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send Message</title>
+</head>
+<body>
+<header th:insert="fragments/header.html :: header"></header>
+<main  id="messageMain">
+<form id="messageForm" action="/sendmessage" method="POST">
+    <span>Recipient: </span><input id="messageTo" type="text" name="username">
+    <span>Message: </span><textarea id="messageText" name="message"></textarea>
+    <input id="messageSubmit" type="submit" value="FULL SEND">
+</form>
+</main>
+</body>
+</html>

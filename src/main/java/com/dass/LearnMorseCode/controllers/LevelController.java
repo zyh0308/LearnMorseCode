@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.*;
 public class LevelController {
     @GetMapping("/morseToEnglish")
     public String morseToEnglish(Model m){
-        m.addAttribute("morse", Level.convertToMorseCode("sos"));
-        m.addAttribute("answer","sos");
+//        m.addAttribute("morse", Level.convertToMorseCode("sos"));
+//        m.addAttribute("answer","sos");
         return "MorseToEnglish";
     }
     @GetMapping("/englishToMorse")
     public String englishToMorse(Model m){
-        m.addAttribute("morse", Level.convertToMorseCode("sos"));
-        m.addAttribute("answer","sos");
+//        m.addAttribute("morse", Level.convertToMorseCode("sos"));
+//        m.addAttribute("answer","sos");
         return "englishToMorse";
     }
 }
