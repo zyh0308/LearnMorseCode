@@ -18,10 +18,12 @@ public class ProfileController {
     @GetMapping("/profile")
     public String getCreate(Principal p, Model m){
 
-        if (p != null) {
+        if(p != null){
             m.addAttribute("username", p.getName());
+            m.addAttribute("action","/logout");
+        } else {
+            m.addAttribute("action","/login");
         }
-
         return "profile";
     }
 }

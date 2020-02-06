@@ -23,8 +23,11 @@ public class FriendsController {
     public String getCreate(Principal p, Model m){
 
         // Calling currently logged in username (me)
-        if (p != null) {
+        if(p != null){
             m.addAttribute("username", p.getName());
+            m.addAttribute("action","/logout");
+        } else {
+            m.addAttribute("action","/login");
         }
 
         // List to display all users in database
