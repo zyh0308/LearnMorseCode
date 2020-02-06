@@ -7,8 +7,31 @@
 </head>
 <body>
 <header th:insert="fragments/header.html :: header"></header>
-<main>
+<main id="friendsMain">
+    <br>
     <h1>[[${username}]]'s Friends List:</h1>
+    <br>
+    <ul class="userList"  th:each="user : ${allUsers}">
+        <li>
+            <span class="displayUsernameInFriends" th:text="${user.username}"></span>
+        </li>
+        <li>
+            <!--Send User A Message-->
+            <form class="userMessageForm" action="/sendmessage" method="GET">
+<!--                <input type="hidden" th:value="${user.username}" name="sendingMessageTo">-->
+                <button class="sendMessageToUserButton">Send Message</button>
+            </form>
+        </li>
+
+<!--        <li>-->
+<!--            &lt;!&ndash;View User's Profile&ndash;&gt;-->
+<!--            <form th:action="'/profile/'+${user.id}" method="GET">-->
+<!--                <input type="hidden" th:value="${user.id}" name="id">-->
+<!--                <button class="viewUserProfileButton">View User's Page</button>-->
+<!--            </form>-->
+<!--        </li>-->
+
+    </ul>
 </main>
 </body>
 </html>
