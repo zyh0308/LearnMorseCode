@@ -17,7 +17,7 @@
     <audio id="dah">
         <source src="dah.wav" type="audio/mpeg">
     </audio>
-    <title>Document</title>
+    <title>[[${username}]]'s Inbox</title>
 </head>
 <body>
 <ul>
@@ -27,6 +27,7 @@
         <button type="submit" th:value="${message.id}">Play</button>
     </li>
 </ul>
+<a id="profileButton" href="/profile"><button style="font-size:36px">Back to Profile</button></a>
 <script src="/inbox.js"></script>
 </body>
 </html>
