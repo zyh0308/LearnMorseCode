@@ -40,20 +40,22 @@ $(document).ready( ()=>{
     playAudio(morse);
     })
     // checks the input against the correct answer for english to morse
-    $("#checkMorse").click(function checkMorse(){
+    $("#checkMorse").click(function checkMorse(e){
     if(correctAnswerMorse == $("#input").text()){
     alert("Correct!");
 
     } else {
-    alert("Incorrect!");
+        e.preventDefault();
+        alert("Incorrect!");
     }
     })
     // checks the input against the correct answer for morse to english
-    $("#checkEnglish").click(function checkEnglish(){
+    $("#checkEnglish").click(function checkEnglish(e){
     if(correctAnswerEnglish == $("#userAnswer").val().toLowerCase()){
         alert("Correct!");
     } else {
-    alert("Incorrect!");
+        e.preventDefault();
+        alert("Incorrect!");
     }
     })
     $("#sender").click(()=>{
