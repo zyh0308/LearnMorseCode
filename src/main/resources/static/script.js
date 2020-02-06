@@ -46,6 +46,7 @@ $(document).ready( ()=>{
 
     } else {
         e.preventDefault();
+        $("#input").text("");
         alert("Incorrect!");
     }
     })
