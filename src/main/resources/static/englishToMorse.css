@@ -18,12 +18,6 @@ body{
     width:150px;
 }
 
-img{
-    /*position: absolute;
-    opacity:30%;
-    left:34%; */
-
-}
 .readiness{
     -webkit-animation: pulse linear .5s 10;
     animation: pulse linear .5s 10;

@@ -18,15 +18,24 @@
         <source src="dah.wav" type="audio/mpeg">
     </audio>
     <title>Mock Level</title>
+    <link type="text/css" rel="stylesheet" href="/englishToMorse.css">
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
+<header th:insert="fragments/header.html :: header"></header>
+
 <main>
-    <p id="output">[[${morse}]]</p>
+    <div id="container">
+
+    <p id="output">[[${english}]]</p>
     <p id='display'></p>
+        <p>Please convert " [[${answer}]]" to English text</p>
     <button id="play">Play</button>
     <p id="correctAnswer">[[${answer}]]</p>
     Type answer here: <input type="text" id="userAnswer">
     <button id="checkEnglish">Check Answer</button>
+    </div>
 </main>
 <script src="/script.js"></script>
 </body>
