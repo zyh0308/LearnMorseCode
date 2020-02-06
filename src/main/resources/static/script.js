@@ -32,6 +32,10 @@ $(document).ready( ()=>{
         if (e.which == 32) {
             $("#input").text(()=> $("#input").text() + " ");
         }
+        if(e.which==8){
+            $("#input").text(()=> $("#input").text().slice(0, $("#input").text().length-1));
+
+        }
     })
     // pressing play plays the audio of the output
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,9 +32,13 @@
     <p id='display'></p>
         <p>Please convert " [[${answer}]]" to English text</p>
     <button id="play">Play</button>
-    <p id="correctAnswer">[[${answer}]]</p>
     Type answer here: <input type="text" id="userAnswer">
-    <button id="checkEnglish">Check Answer</button>
+
+        <form action="/profile" method="GET">
+            <input type="hidden" id="correctAnswer" th:value="${answer}">
+            <input th:value="${level_number}" type="hidden" name="currentLevel">
+            <button id="checkEnglish" type=submit>Check Result</button>
+        </form>
     </div>
 </main>
 <script src="/script.js"></script>
