@@ -30,14 +30,6 @@ public class MessageController {
         return new RedirectView("/friends");
     }
 
-//    @PostMapping("/login/{id}")
-//    public RedirectView loginUser(String username, String password){
-//
-//        ApplicationUser currentUser = applicationUserRepo.findByUsername(username);
-//
-//        return new RedirectView("/profile/{id}");
-//    }
-
     @GetMapping("/inbox")
     public String getInbox(Principal p, Model m){
 

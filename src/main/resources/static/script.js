@@ -55,8 +55,8 @@ $(document).ready( ()=>{
     alert("Incorrect!");
     }
     })
-    $("#sender").click(()=>{
-    $("#messageContent").val($("#input").text());
+    $("#messageSubmit").click(()=>{
+    $("#messageText").val($("#input").text());
     })
 });
 
