@@ -66,19 +66,7 @@ background-size: cover;
   text-align: center;
   margin-top: 5vh;
 }
-/*  width: 40%;*/
-/*  height: 80px;*/
-/*  !*padding: 12px 20px;*!*/
-/*  overflow: hidden;*/
-/*  text-overflow: ellipsis;*/
-/*  display: -webkit-box;*/
-/*  -webkit-box-orient: vertical;*/
-/*  -webkit-line-clamp: 2; !* number of lines to show *!*/
-/*  !*line-height: 40px;        !* fallback *!*!*/
-/*  !*max-height: 80px;*!*/
-/*  align-items:center ;*/
 
-/*}*/
 #username{
   display: flex;
   justify-content: center;
