@@ -29,9 +29,12 @@
 <aside>
     <img src="https://external-preview.redd.it/dBDyLhdTTPwFqFzqrcZv2zzml3jJh0W8CR6kl4WSqTk.jpg?width=216&crop=smart&auto=webp&s=32334fb7e2316977da67b71b2afe49c7f2f06407" id="legendId" alt="legend">
 </aside>
+    <p>INSTRUCTION</p>
+    <p>Use the left arrow for dits (.) and the right arrow for dahs (-)</p>
     <div id="container">
         <p id="output">[[${morse}]] </p>
         <p><p>Please convert " [[${answer}]] " to Morse Code</p></p>
+
         <p id="input"></p>
         <form action="/morseToEnglish" method="POST">
             <input type="hidden" id="correctAnswer" th:value="${answer}">
