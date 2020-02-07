@@ -9,7 +9,7 @@
 <header th:insert="fragments/header.html :: header"></header>
 <main id="friendsMain">
     <br>
-    <h1>[[${username}]]'s Friends List:</h1>
+    <h1>[[${username}]]'s Friend List:</h1>
     <br>
     <ul class="userList"  th:each="user : ${allUsers}">
         <li>
