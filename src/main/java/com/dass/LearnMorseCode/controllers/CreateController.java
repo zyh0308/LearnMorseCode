@@ -102,7 +102,7 @@ public class CreateController {
                 break;
             case 10:
                 m.addAttribute("answer", getQuoteFromApi());
-                m.addAttribute("morse", Level.getQuoteFromApi());
+                m.addAttribute("morse", Level.convertToMorseCode(Level.getQuoteFromApi()));
 
         }
         m.addAttribute("level_number", level_number);

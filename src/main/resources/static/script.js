@@ -1,4 +1,7 @@
 
+// https://stackoverflow.com/questions/1402698/binding-arrow-keys-in-js-jquery
+// I used this thread to figure out how to use the keydown method.
+
 $(document).ready( ()=>{
     // Grabs the morse, cleans it up, hides the ugly morse with the slashes, displays the clean morse
     // and gets the correct answers
