@@ -57,6 +57,7 @@ $(document).ready( ()=>{
     if(correctAnswerEnglish == $("#userAnswer").val().toLowerCase()){
         alert("Correct!");
     } else {
+    console.log(correctAnswerEnglish, $("#userAnswer").val().toLowerCase());
         event.preventDefault();
         alert("Incorrect!");
     }
@@ -116,16 +117,12 @@ console.log(string);
 
 // plays the dit sound
 function playDit(){
-var d = Date.now()
-console.log("dit",d);
     $("audio#dit")[0].currentTime = 0;
     $("audio#dit")[0].play();
 }
 
 // plays the dah sound
 function playDah(){
-var d = Date.now();
-console.log("dah",d);
     $("audio#dah")[0].currentTime = 0;
     $("audio#dah")[0].play();
 }
