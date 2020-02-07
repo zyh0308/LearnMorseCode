@@ -18,16 +18,28 @@
         <source src="dah.wav" type="audio/mpeg">
     </audio>
     <title>You've Got Mail</title>
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
+<header th:insert="fragments/header.html :: header"></header>
+<main>
+<div id="container">
 <ul>
-    <li th:each="message : ${messages}">
+
+    <li id="inbox" th:each="message : ${messages}">
         <p th:text="${message.content}" th:id="${message.id}"></p>
-        <span th:text="'From: ' + ${message.user.username}"></span>
-        <button type="submit" th:value="${message.id}">Play</button>
+        <span th:text="'From: ' + ${message.sender}"></span>
+        <button id="ii"   type="submit" style="font-size:20px" th:value="${message.id}">Play</button>
+
     </li>
+
 </ul>
-<a id="profileButton" href="/profile"><button style="font-size:36px">Back to Profile</button></a>
+<a id="profileButton" href="/profile"><button style="font-size:28px">Back to Profile</button></a>
+</div>
+</main>
 <script src="/inbox.js"></script>
 </body>
 </html>
