@@ -13,21 +13,19 @@ $(document).ready( ()=>{
     $("#display").text(cleanMorse);
     
     // left arrow makes a dit sound and inputs a "."
-    $(document).keydown(function(e){
+    $(document).keydown((e)=>{
         if (e.which == 37) {
-           $("audio#dit")[0].currentTime = 0;
-           $("audio#dit")[0].play();
+           playDit();
            $("#input").text(()=> $("#input").text() + ".");
-           return false;
+           return true;
         }
     });
     // right arrow makes a dah sound and inputs a "-"
-    $(document).keydown(function(e){
+    $(document).keydown((e)=>{
         if (e.which == 39) {
-        $("audio#dah")[0].currentTime = 0;
-        $("audio#dah")[0].play();
+        playDah();
         $("#input").text(()=> $("#input").text() + "-");
-        return false;
+        return true;
         }
     });
     // space bar creats a space in the input
