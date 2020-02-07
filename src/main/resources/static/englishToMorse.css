@@ -62,9 +62,24 @@ padding: 10px;
 }
 
 #legendId {
+opacity: 100%;
 display: block;
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 3vh;
 }
+
+#legendMessageId{
+opacity: 100%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 3vh;
+}
+
+
+
+
+
+
 
