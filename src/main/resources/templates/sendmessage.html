@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="">
-<link type="text/css" rel="stylesheet" href="/style.css">
+
 <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/style.css">
+<link type="text/css" rel="stylesheet" href="/englishToMorse.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -24,16 +27,26 @@
 </head>
 <body>
 <header th:insert="fragments/header.html :: header"></header>
-<main  id="messageMain">
+<div  id="messageMain">
 
+<aside>
+    <img src="https://external-preview.redd.it/dBDyLhdTTPwFqFzqrcZv2zzml3jJh0W8CR6kl4WSqTk.jpg?width=216&crop=smart&auto=webp&s=32334fb7e2316977da67b71b2afe49c7f2f06407" id="legendMessageId" alt="legend">
+</aside>
+    <div id="container">
+
+<p>INSTRUCTIONS</p> <br>
+        <p>left arrow for dits and right arrow for dahs</p>
 <form id="messageForm" action="/sendmessage" method="POST">
+
     <span>Recipient: </span><input id="messageTo" type="text" name="username">
     <span>Message: </span><p id="input"></p>
     <input id="messageText" type="hidden" name="message">
     <input id="messageSubmit" type="submit" value="FULL SEND">
 </form>
-
+</div>
+</div>
 </main>
+
 <script src="/script.js"></script>
 </body>
 </html>

@@ -86,8 +86,8 @@ public class CreateController {
 
                 break;
             case 7:
-                m.addAttribute("answer", "the");
-                m.addAttribute("morse", Level.convertToMorseCode("the"));
+                m.addAttribute("answer", "SOS");
+                m.addAttribute("morse", Level.convertToMorseCode("sos"));
 
                 break;
             case 8:
@@ -102,7 +102,7 @@ public class CreateController {
                 break;
             case 10:
                 m.addAttribute("answer", getQuoteFromApi());
-                m.addAttribute("morse", Level.getQuoteFromApi());
+                m.addAttribute("morse", Level.convertToMorseCode(Level.getQuoteFromApi()));
 
         }
         m.addAttribute("level_number", level_number);
@@ -111,109 +111,52 @@ public class CreateController {
     }
 
 
-    @GetMapping("/morseToEnglish/{level_number}")
-    public String morseToEnglish(@PathVariable int level_number, Model m) throws IOException {
-        switch (level_number) {
-            case 1:
-                m.addAttribute("answer", "-.....");
-                m.addAttribute("english", MorseCode.morseToEnglish("-....."));
-                break;
-            case 2:
-                m.addAttribute("answer", "--.-..-..-.-.-.-");
-                m.addAttribute("english", MorseCode.morseToEnglish("--.-..-..-.-.-.-"));
-
-                break;
-            case 3:
-                m.addAttribute("answer", "-....-.---.---.");
-                m.addAttribute("english", MorseCode.morseToEnglish("-....-.---.---."));
-
-                break;
-            case 4:
-                m.addAttribute("answer", "..-.----..-");
-                m.addAttribute("english", MorseCode.morseToEnglish("..-.----..-"));
-
-                break;
-            case 5:
-                m.addAttribute("answer", ".---..---.--....");
-                m.addAttribute("english", MorseCode.morseToEnglish(".---..---.--...."));
-
-                break;
-            case 6:
-                m.addAttribute("answer", "---...-..-.");
-                m.addAttribute("english", MorseCode.morseToEnglish("---...-..-."));
-
-                break;
-            case 7:
-                m.addAttribute("answer", "-.....");
-                m.addAttribute("english", MorseCode.morseToEnglish("-....."));
-
-                break;
-            case 8:
-                m.addAttribute("answer", ".-...---..-.--");
-                m.addAttribute("english", MorseCode.morseToEnglish(".-...---..-.--"));
-
-                break;
-            case 9:
-                m.addAttribute("answer", "-..-----.");
-                m.addAttribute("english", MorseCode.morseToEnglish("-..-----."));
-
-                break;
-//            case 10:
-//                m.addAttribute("answer", getQuoteFromApi());
-//                m.addAttribute("morse", MorseCode.getQuoteFromApi());
-
-        }
-        m.addAttribute("level_number", level_number);
-
-        return "morseToEnglish";
-    }
-
-    @PostMapping("morseToEnglish")
-
-    public RedirectView goToMorseToEnglish(int currentLevel, Model m) {
+    @PostMapping("/morseToEnglish")
+    public String goToMorseToEnglish(int currentLevel, Model m) {
+        System.out.println(currentLevel);
         switch (currentLevel) {
             case 1:
-                m.addAttribute("answer", "-.....");
-                m.addAttribute("english", MorseCode.morseToEnglish("-....."));
-                break;
-            case 2:
-                m.addAttribute("answer", "--.-..-..-.-.-.-");
-                m.addAttribute("english", MorseCode.morseToEnglish("--.-..-..-.-.-.-"));
+                m.addAttribute("answer", "the");
+                m.addAttribute("morse", Level.convertToMorseCode("the"));
 
                 break;
+            case 2:
+                m.addAttribute("answer", "quick");
+                m.addAttribute("morse", Level.convertToMorseCode("quick"));
+                break;
             case 3:
-                m.addAttribute("answer", "-....-.---.---.");
-                m.addAttribute("english", MorseCode.morseToEnglish("-....-.---.---."));
+                m.addAttribute("answer", "brown");
+                m.addAttribute("morse",Level.convertToMorseCode("brown"));
 
                 break;
             case 4:
-                m.addAttribute("answer", "..-.----..-");
-                m.addAttribute("english", MorseCode.morseToEnglish("..-.----..-"));
+                m.addAttribute("answer", "fox");
+                m.addAttribute("morse", Level.convertToMorseCode("fox"));
 
                 break;
             case 5:
-                m.addAttribute("answer", ".---..---.--....");
-                m.addAttribute("english", MorseCode.morseToEnglish(".---..---.--...."));
+                m.addAttribute("answer", "jumps");
+                m.addAttribute("morse", Level.convertToMorseCode("jumps"));
 
                 break;
             case 6:
-                m.addAttribute("answer", "---...-..-.");
-                m.addAttribute("english", MorseCode.morseToEnglish("---...-..-."));
+                m.addAttribute("answer", "over");
+                m.addAttribute("morse",Level.convertToMorseCode("over"));
 
                 break;
             case 7:
-                m.addAttribute("answer", "-.....");
-                m.addAttribute("english", MorseCode.morseToEnglish("-....."));
+                m.addAttribute("answer", "sos");
+                m.addAttribute("morse",Level.convertToMorseCode("sos"));
 
                 break;
             case 8:
-                m.addAttribute("answer", ".-...---..-.--");
-                m.addAttribute("english", MorseCode.morseToEnglish(".-...---..-.--"));
+                m.addAttribute("answer", "lazy");
+                m.addAttribute("morse",Level.convertToMorseCode("lazy"));
 
                 break;
             case 9:
-                m.addAttribute("answer", "-..-----.");
-                m.addAttribute("english", MorseCode.morseToEnglish("-..-----."));
+                m.addAttribute("answer", "dog");
+                m.addAttribute("morse",Level.convertToMorseCode("dog"));
 
                 break;
 
@@ -221,7 +164,7 @@ public class CreateController {
         }
         m.addAttribute("level_number", currentLevel);
 
-        return new RedirectView("/morseToEnglish");
+        return ("morseToEnglish");
     }
 
 }
