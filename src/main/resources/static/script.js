@@ -1,4 +1,7 @@
 
+// https://stackoverflow.com/questions/1402698/binding-arrow-keys-in-js-jquery
+// I used this thread to figure out how to use the keydown method.
+
 $(document).ready( ()=>{
     // Grabs the morse, cleans it up, hides the ugly morse with the slashes, displays the clean morse
     // and gets the correct answers
@@ -8,35 +11,30 @@ $(document).ready( ()=>{
     $("#correctAnswer").hide();
     const cleanMorse = displayMorse($("#output").text());
     $("#display").text(cleanMorse);
-    
-    // left arrow makes a dit sound and inputs a "."
-    $(document).keydown(function(e){
-        if (e.which == 37) {
-           $("audio#dit")[0].currentTime = 0;
-           $("audio#dit")[0].play();
-           $("#input").text(()=> $("#input").text() + ".");
-           return false;
-        }
-    });
-    // right arrow makes a dah sound and inputs a "-"
-    $(document).keydown(function(e){
-        if (e.which == 39) {
-        $("audio#dah")[0].currentTime = 0;
-        $("audio#dah")[0].play();
-        $("#input").text(()=> $("#input").text() + "-");
-        return false;
-        }
-    });
+
+    // delete removes the last character input
     // space bar creats a space in the input
-    $(document).keydown(function(e){
-        if (e.which == 32) {
+    // left arrow makes a dit sound and inputs a "."
+    // right arrow makes a dah sound and inputs a "-"
+
+    $(document).keydown(function(event){
+        if(event.which==8){
+            $("#input").text(()=> $("#input").text().slice(0, $("#input").text().length-1));
+         }
+        if (event.which == 32) {
             $("#input").text(()=> $("#input").text() + " ");
         }
-        if(e.which==8){
-            $("#input").text(()=> $("#input").text().slice(0, $("#input").text().length-1));
+        if (event.which == 37) {
+            playDit();
+            $("#input").text(()=> $("#input").text() + ".");
+         }
+        if (event.which == 39) {
+            playDah();
+            $("#input").text(()=> $("#input").text() + "-");
+         }
 
-        }
     })
+
     // pressing play plays the audio of the output
 
     const morse = $("#output").text();
@@ -44,22 +42,23 @@ $(document).ready( ()=>{
     playAudio(morse);
     })
     // checks the input against the correct answer for english to morse
-    $("#checkMorse").click(function checkMorse(e){
+    $("#checkMorse").click(function checkMorse(event){
     if(correctAnswerMorse == $("#input").text()){
     alert("Correct!");
 
     } else {
-        e.preventDefault();
+        event.preventDefault();
         $("#input").text("");
         alert("Incorrect!");
     }
     })
     // checks the input against the correct answer for morse to english
-    $("#checkEnglish").click(function checkEnglish(e){
+    $("#checkEnglish").click(function checkEnglish(event){
     if(correctAnswerEnglish == $("#userAnswer").val().toLowerCase()){
         alert("Correct!");
     } else {
-        e.preventDefault();
+    console.log(correctAnswerEnglish, $("#userAnswer").val().toLowerCase());
+        event.preventDefault();
         alert("Incorrect!");
     }
     })
@@ -70,6 +69,7 @@ $(document).ready( ()=>{
 
 // plays the audio with the correct timing
 function playAudio(string){
+console.log(string);
     counter = 0;
     bar = false;
     space = false;
@@ -78,13 +78,15 @@ function playAudio(string){
         if(string.charAt(i) == "."){
             if(space){
             setTimeout(playDit,((7 * timeUnit) + (timeUnit * counter)));
-            counter++;
+            counter += 8;
             space = false;
             } else if(bar){
+            console.log("dit " + ((3 * timeUnit) + (timeUnit * counter)))
                 setTimeout(playDit,((3 * timeUnit) + (timeUnit * counter)));
-                counter++;
+                counter += 4;
                 bar = false;
             } else {
+            console.log("dit " + (timeUnit * counter))
                 setTimeout(playDit,(timeUnit * counter));
                 counter++;
             }
@@ -94,11 +96,13 @@ function playAudio(string){
                 counter++;
                 space = false;
                 } else if(bar){
+                console.log("dah " + ((3 * timeUnit) + (timeUnit * counter)))
                     setTimeout(playDah,((3 * timeUnit) + (timeUnit * counter)));
 
                     counter++;
                     bar = false;
                 } else {
+                console.log("dah " + (timeUnit * counter))
                     setTimeout(playDah,(timeUnit * counter));
 
                     counter++;

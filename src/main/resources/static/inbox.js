@@ -15,6 +15,7 @@ function displayMorse(code){
 
 // plays the audio with the correct timing
 function playAudio(string){
+console.log(string);
     counter = 0;
     bar = false;
     space = false;
@@ -23,13 +24,15 @@ function playAudio(string){
         if(string.charAt(i) == "."){
             if(space){
             setTimeout(playDit,((7 * timeUnit) + (timeUnit * counter)));
-            counter++;
+            counter += 8;
             space = false;
             } else if(bar){
+            console.log("dit " + ((3 * timeUnit) + (timeUnit * counter)))
                 setTimeout(playDit,((3 * timeUnit) + (timeUnit * counter)));
-                counter++;
+                counter += 4;
                 bar = false;
             } else {
+            console.log("dit " + (timeUnit * counter))
                 setTimeout(playDit,(timeUnit * counter));
                 counter++;
             }
@@ -39,11 +42,13 @@ function playAudio(string){
                 counter++;
                 space = false;
                 } else if(bar){
+                console.log("dah " + ((3 * timeUnit) + (timeUnit * counter)))
                     setTimeout(playDah,((3 * timeUnit) + (timeUnit * counter)));
 
                     counter++;
                     bar = false;
                 } else {
+                console.log("dah " + (timeUnit * counter))
                     setTimeout(playDah,(timeUnit * counter));
 
                     counter++;

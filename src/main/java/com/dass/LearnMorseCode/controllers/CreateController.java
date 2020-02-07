@@ -86,8 +86,8 @@ public class CreateController {
 
                 break;
             case 7:
-                m.addAttribute("answer", "the");
-                m.addAttribute("morse", Level.convertToMorseCode("the"));
+                m.addAttribute("answer", "SOS");
+                m.addAttribute("morse", Level.convertToMorseCode("sos"));
 
                 break;
             case 8:
@@ -102,7 +102,7 @@ public class CreateController {
                 break;
             case 10:
                 m.addAttribute("answer", getQuoteFromApi());
-                m.addAttribute("morse", Level.getQuoteFromApi());
+                m.addAttribute("morse", Level.convertToMorseCode(Level.getQuoteFromApi()));
 
         }
         m.addAttribute("level_number", level_number);
@@ -117,46 +117,46 @@ public class CreateController {
         switch (currentLevel) {
             case 1:
                 m.addAttribute("answer", "the");
-                m.addAttribute("morse", "-/..../.");
+                m.addAttribute("morse", Level.convertToMorseCode("the"));
 
                 break;
             case 2:
                 m.addAttribute("answer", "quick");
-                m.addAttribute("morse", "--.-..-..-.-.-.-");
+                m.addAttribute("morse", Level.convertToMorseCode("quick"));
                 break;
             case 3:
                 m.addAttribute("answer", "brown");
-                m.addAttribute("morse", "-....-.---.---.");
+                m.addAttribute("morse",Level.convertToMorseCode("brown"));
 
                 break;
             case 4:
                 m.addAttribute("answer", "fox");
-                m.addAttribute("morse", "..-.----..-");
+                m.addAttribute("morse", Level.convertToMorseCode("fox"));
 
                 break;
             case 5:
                 m.addAttribute("answer", "jumps");
-                m.addAttribute("morse", ".---..---.--....");
+                m.addAttribute("morse", Level.convertToMorseCode("jumps"));
 
                 break;
             case 6:
                 m.addAttribute("answer", "over");
-                m.addAttribute("morse", "---...-..-.");
+                m.addAttribute("morse",Level.convertToMorseCode("over"));
 
                 break;
             case 7:
                 m.addAttribute("answer", "the");
-                m.addAttribute("morse", "-.....");
+                m.addAttribute("morse",Level.convertToMorseCode("the"));
 
                 break;
             case 8:
                 m.addAttribute("answer", "lazy");
-                m.addAttribute("morse", ".-...---..-.--");
+                m.addAttribute("morse",Level.convertToMorseCode("lazy"));
 
                 break;
             case 9:
                 m.addAttribute("answer", "dog");
-                m.addAttribute("morse", "-..-----.");
+                m.addAttribute("morse",Level.convertToMorseCode("dog"));
 
                 break;
 
