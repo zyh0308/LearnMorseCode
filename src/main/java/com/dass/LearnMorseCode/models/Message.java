@@ -16,14 +16,16 @@ public class Message {
     @ManyToOne
     ApplicationUser user;
 
+    String sender;
 
     public Message(){
 
     }
 
-    public Message(String content, ApplicationUser user){
+    public Message(String content, ApplicationUser user,String sender){
         this.content = content;
         this.user = user;
+        this.sender = sender;
     }
 
     private String content;
@@ -43,5 +45,13 @@ public class Message {
     public long getId() {
 
         return id;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 }
