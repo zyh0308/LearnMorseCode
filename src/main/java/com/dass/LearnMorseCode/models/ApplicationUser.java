@@ -14,9 +14,6 @@ public class ApplicationUser implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-//    @OneToMany
-//    List<ApplicationUser> friends;
-
     @OneToMany(mappedBy = "user")
     List<Message> inbox;
 
@@ -28,10 +25,6 @@ public class ApplicationUser implements UserDetails {
         this.username = username;
         this.password = password;
     }
-
-//    public List<ApplicationUser> getFriends() {
-//        return friends;
-//    }
 
     public List<Message> getInbox() {
         return inbox;
