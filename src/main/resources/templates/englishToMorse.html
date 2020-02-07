@@ -32,14 +32,8 @@
     <div id="container">
         <p id="output">[[${morse}]] </p>
         <p><p>Please convert " [[${answer}]] " to Morse Code</p></p>
-        <p id="player"><button id="play">Listen to the Morse Code sound of your answer</button></p>
-        <div id="didi">
-            Type answer here: <input type="text" id="userAnswer">
-
-        </div>
-
         <p id="input"></p>
-        <form action="/morseToEnglish" method="GET">
+        <form action="/morseToEnglish" method="POST">
             <input type="hidden" id="correctAnswer" th:value="${answer}">
 
             <input th:value="${level_number}" type="hidden" name="currentLevel">

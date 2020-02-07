@@ -67,6 +67,7 @@ public class MorseCode {
 
         for (int i =0; i<charArray.length;i++){
             if (! dictionary.containsKey(charArray[i])){
+                System.out.println(charArray[i]);
                 throw new IllegalArgumentException();
             }
             String english=dictionary.get(charArray[i]);
