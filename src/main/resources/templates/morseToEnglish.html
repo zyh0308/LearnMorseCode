@@ -12,10 +12,10 @@
 
 
     <audio id="dit">
-        <source src="dit.wav" type="audio/mpeg">
+        <source src="/dit.wav" type="audio/mpeg">
     </audio>
     <audio id="dah">
-        <source src="dah.wav" type="audio/mpeg">
+        <source src="/dah.wav" type="audio/mpeg">
     </audio>
     <title>Mock Level</title>
     <link type="text/css" rel="stylesheet" href="/englishToMorse.css">
@@ -26,11 +26,15 @@
 <header th:insert="fragments/header.html :: header"></header>
 
 <main>
+    <aside>
+        <img src="https://external-preview.redd.it/dBDyLhdTTPwFqFzqrcZv2zzml3jJh0W8CR6kl4WSqTk.jpg?width=216&crop=smart&auto=webp&s=32334fb7e2316977da67b71b2afe49c7f2f06407" id="legendId" alt="legend">
+    </aside>
+    <p>INSTRUCTION</p>
+    <p>Use the left arrow for dits (.) and the right arrow for dahs (-)</p>
     <div id="container">
 
-    <p id="output">[[${english}]]</p>
-    <p id='display'></p>
-        <p>Please convert " [[${answer}]]" to English text</p>
+    <p id="output">[[${morse}]]</p>
+        <p>Please convert "<span id="display">[[${morse}]]</span>" to English text</p>
     <button id="play">Play</button>
     Type answer here: <input type="text" id="userAnswer">
 
