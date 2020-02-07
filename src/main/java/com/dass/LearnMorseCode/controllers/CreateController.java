@@ -86,8 +86,8 @@ public class CreateController {
 
                 break;
             case 7:
-                m.addAttribute("answer", "the");
-                m.addAttribute("morse", Level.convertToMorseCode("the"));
+                m.addAttribute("answer", "SOS");
+                m.addAttribute("morse", Level.convertToMorseCode("sos"));
 
                 break;
             case 8:
