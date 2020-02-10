@@ -8,7 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.security.Principal;
 
-
+// This and login controller should all just be in the user controller. And it could use a helper function to reduce
+// repeated code.
 @Controller
 public class ProfileController {
 

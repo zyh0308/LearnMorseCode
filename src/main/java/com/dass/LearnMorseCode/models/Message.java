@@ -6,6 +6,8 @@ import javax.persistence.*;
 import java.util.*;
 
 
+// Need tests for getters and setters
+//
 @Entity
 public class Message {
 

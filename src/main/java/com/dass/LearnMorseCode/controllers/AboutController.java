@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.security.Principal;
 
+
+// This could be combined with other controllers and a helper function could be used to get the username
 @Controller
 public class AboutController {
 

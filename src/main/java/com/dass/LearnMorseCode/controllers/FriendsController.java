@@ -17,12 +17,14 @@ import java.security.Principal;
 public class FriendsController {
 
     @Autowired
+    // Could remove private to improve usability
     private ApplicationUserRepo applicationUserRepo;
 
     @GetMapping("/friends")
     public String getCreate(Principal p, Model m){
 
         // Calling currently logged in username (me)
+        // This could be a helper function
         if(p != null){
             m.addAttribute("username", p.getName());
             m.addAttribute("action","/logout");
@@ -37,6 +39,7 @@ public class FriendsController {
     }
 
     @GetMapping("/friends/{id}")
+    // good that this one is plural
     public String getAllFriends(@PathVariable long id, Principal p, Model d){
         ApplicationUser friendsList = applicationUserRepo.findById(id).get();
         ApplicationUser loggedInUser = applicationUserRepo.findByUsername(p.getName());

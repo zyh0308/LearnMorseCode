@@ -16,6 +16,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+// Should be inside of the model
+// could remove commented out code
+// There is a main function inside of the level class that does nothing. Should be removed.
+// Could use a hashmap which has a lookup of O(1) instead of n^2
+// The API call doesn't work on heroku but works locally.
+// The API call should probably be on a route.
+// Should have more comments
 @Entity
 public class Level {
     String toBeMorseCoded = "";

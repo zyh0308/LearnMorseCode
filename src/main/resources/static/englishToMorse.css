@@ -36,6 +36,9 @@ opacity:0%;
     text-align:center;
     padding-top: 80vh;
 }
+
+/*Is this a public domain image?*/
+/*The CSS should all be inside of one static folder, this whole file shouldn't even exist also.*/
 body{
 background-image: url("https://i.pinimg.com/originals/23/70/52/2370529b20fcfd875381fdd7eb5ac751.jpg");
 /*z-index: -50;*/

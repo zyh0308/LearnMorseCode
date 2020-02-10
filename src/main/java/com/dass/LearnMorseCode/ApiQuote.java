@@ -1,5 +1,9 @@
 package com.dass.LearnMorseCode;
 
+
+// Should be inside of the models directory
+// Could add spacing to improve readability
+//
 public class ApiQuote {
     String quoteText;
     public ApiQuote(String quoteText){

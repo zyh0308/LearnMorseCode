@@ -7,6 +7,10 @@ import javax.persistence.*;
 import java.util.*;
 
 
+
+// Need getters and setters for the model
+// need tests for those getters and setters
+//
 @Entity
 public class ApplicationUser implements UserDetails {
 

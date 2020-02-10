@@ -7,6 +7,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.HashMap;
+
+
+// This should be inside of the models directory
+// This is redundant, there are two classes for translation that could be reduced to one
+// There is a main method inside of the class
+// could remove the commented out code
+// could use more comments to explain
 @Entity
 public class MorseCode {
 

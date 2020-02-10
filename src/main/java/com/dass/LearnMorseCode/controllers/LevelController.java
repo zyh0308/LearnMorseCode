@@ -6,6 +6,7 @@ import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
+// This may not be used at all? At the very least the commented out code could be removed.
 public class LevelController {
     @GetMapping("/morseToEnglish")
     public String morseToEnglish(Model m){

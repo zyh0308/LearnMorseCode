@@ -23,6 +23,9 @@ import java.util.LinkedList;
 
 import static com.dass.LearnMorseCode.Level.getQuoteFromApi;
 
+// Bad controller name
+// The level repository and Morse Code Repository are not being used
+// could improve readability by not having the other repositories be private
 @Controller
 public class CreateController {
 
@@ -43,6 +46,7 @@ public class CreateController {
     }
 
     @PostMapping("/create")
+    // create what
     public RedirectView registerUser(String username, String password) {
         ApplicationUser newUser = new ApplicationUser(username, passwordEncoder.encode(password));
         applicationUserRepo.save(newUser);
@@ -54,6 +58,9 @@ public class CreateController {
     }
 
     @GetMapping("/level/{level_number}")
+    // could use a plural to improve readability... "Levels"
+    // the strings could all be stored in an array and use indexes instead of cases and use one function
+    // error routs or try catches should be added in case the level doesn't exist
     public String showLevelQuestion(@PathVariable int level_number, Model m) throws IOException {
         switch (level_number) {
             case 1:
@@ -112,6 +119,7 @@ public class CreateController {
 
 
     @PostMapping("/morseToEnglish")
+    // the strings could all be stored in an array and use indexes instead of cases and use one function
     public String goToMorseToEnglish(int currentLevel, Model m) {
         System.out.println(currentLevel);
         switch (currentLevel) {
@@ -159,6 +167,7 @@ public class CreateController {
                 m.addAttribute("morse",Level.convertToMorseCode("dog"));
 
                 break;
+                // There is no post mapping for level 10. This could explain why level 10 doesn't work.
 
 
         }

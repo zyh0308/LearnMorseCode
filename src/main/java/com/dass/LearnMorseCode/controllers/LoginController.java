@@ -14,6 +14,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class LoginController {
 
     @Autowired
+    // could improve readability by removing private
     private ApplicationUserRepo applicationUserRepo;
 
     @GetMapping("/login")
@@ -22,6 +23,7 @@ public class LoginController {
     }
 
     @PostMapping("/login/{id}")
+    // Login and profile controller could be combined and this is a bad route name.
     public RedirectView loginUser(String username, String password){
 
         ApplicationUser currentUser = applicationUserRepo.findByUsername(username);

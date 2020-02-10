@@ -33,6 +33,7 @@ public class MessageController {
     @GetMapping("/inbox")
     public String getInbox(Principal p, Model m){
 
+        // this could be a helper function instead
         if(p != null){
             m.addAttribute("username", p.getName());
             m.addAttribute("action","/logout");

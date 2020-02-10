@@ -17,18 +17,20 @@ $(document).ready( ()=>{
     // left arrow makes a dit sound and inputs a "."
     // right arrow makes a dah sound and inputs a "-"
 
+
+    // Could add comments to explain which keys are which - Done
     $(document).keydown(function(event){
-        if(event.which==8){
+        if(event.which==8){ // delete key
             $("#input").text(()=> $("#input").text().slice(0, $("#input").text().length-1));
          }
-        if (event.which == 32) {
+        if (event.which == 32) { // space bar
             $("#input").text(()=> $("#input").text() + " ");
         }
-        if (event.which == 37) {
+        if (event.which == 37) { // left arrow
             playDit();
             $("#input").text(()=> $("#input").text() + ".");
          }
-        if (event.which == 39) {
+        if (event.which == 39) { // right arrow
             playDah();
             $("#input").text(()=> $("#input").text() + "-");
          }

@@ -16,6 +16,7 @@ public class HomeController {
     @GetMapping("/")
     public String getHome(Principal p, Model m){
 //        MorseCode.morseToEnglish("");
+        // This could be a helper function and many of the controllers could be combined
         if(p != null){
             m.addAttribute("username", p.getName());
             m.addAttribute("action","/logout");
@@ -25,6 +26,8 @@ public class HomeController {
         }
         return "home";
     }
+    // Could remove commented out code
+    // This can now be deleted
     @GetMapping("/audiotest")
     public String getAudioTest(){
         return "audiotest";
