@@ -8,6 +8,7 @@ import java.security.Principal;
 @Controller
 public class AboutController {
 
+    // looks good
     @GetMapping("/about")
     public String getAboutUs(Principal p, Model m){
         if(p != null){

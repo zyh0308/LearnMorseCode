@@ -17,7 +17,7 @@ public class MessageController {
     @Autowired
     MessageRepository messageRepo;
 
-    @GetMapping("/sendmessage")
+    @GetMapping("/sendmessage") // Maybe use camel case i.e /sendMessage
     public String getMessagePage(){
         return "sendmessage";
     }

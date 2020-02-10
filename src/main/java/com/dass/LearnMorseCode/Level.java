@@ -17,7 +17,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Level {
+public class Level { // I would put a default constructor that takes no argument.
     String toBeMorseCoded = "";
     int levelTracker = 0;
 
@@ -29,8 +29,11 @@ public class Level {
         this.toBeMorseCoded = toBeMorseCoded;
         this.levelTracker = 0;
     }
+    public Level() {
 
-    public static void main(String [] args) throws IOException {
+    }
+
+    public static void main(String [] args) throws IOException { // I would delete the unused comments for cleanliness
 //        Scanner input = new Scanner(System.in);
 //
 //        convertToMorseCode(getQuoteFromApi());
@@ -49,7 +52,7 @@ public class Level {
         char [] reg = regularText.toUpperCase().toCharArray();  //converts to uppercase and array of chars.
 //                .toCharArray();
 
-
+// I am not sure but I think the keys and values can be refactored to using hashmap
         String [] values = {".-","-...","-.-.","-..",".","..-.","--.", "....","..",".---", "-.-",".-..","--","-.", "---",".--.","--.-",".-.", "...","-",
                 "..-","...-",".--","-..-","-.--","--..",     "-----", ".----","..---","...--","....-",".....","-....","--...","---..","----."};
 

@@ -13,7 +13,7 @@ import java.security.Principal;
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping("/") // this page looks good
     public String getHome(Principal p, Model m){
 //        MorseCode.morseToEnglish("");
         if(p != null){

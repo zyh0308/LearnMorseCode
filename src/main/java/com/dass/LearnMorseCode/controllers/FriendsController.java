@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.security.Principal;
 
 
-
+// looks good to me
 @Controller
 public class FriendsController {
 
@@ -20,7 +20,7 @@ public class FriendsController {
     private ApplicationUserRepo applicationUserRepo;
 
     @GetMapping("/friends")
-    public String getCreate(Principal p, Model m){
+    public String getCreate(Principal p, Model m){ // I would rename the getCreate to showFriends
 
         // Calling currently logged in username (me)
         if(p != null){

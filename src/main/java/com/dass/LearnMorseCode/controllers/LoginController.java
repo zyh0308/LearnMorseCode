@@ -22,10 +22,11 @@ public class LoginController {
     }
 
     @PostMapping("/login/{id}")
-    public RedirectView loginUser(String username, String password){
+    public RedirectView loginUser(String username, String password){ // delete password as it is not used
 
         ApplicationUser currentUser = applicationUserRepo.findByUsername(username);
 
+        // current user is not being used, so I would recommend deleting it
         return new RedirectView("/profile/{id}");
     }
 }

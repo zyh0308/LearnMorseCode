@@ -16,7 +16,7 @@ public class MorseCode {
     private static HashMap<String, String> dictionary;
   
     static {
-
+        // Using hashmap was way cleaner that using two separate arrays
         dictionary = new HashMap<>();
         dictionary.put(".-", "a");
         dictionary.put("-...","b");
@@ -80,6 +80,7 @@ public class MorseCode {
 
 
     }
+    // delete unused comments
 
 //    public String morseToEnglishSentence(String sentence){
 //        String[] sentenceArray=sentence.split("/");
